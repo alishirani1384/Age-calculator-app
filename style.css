@@ -1,0 +1,121 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-grey);
+}
+.card{
+    background-color: var(--White);
+    width: 600px;
+    border-radius: 1rem 1rem 10rem .1rem;
+}
+.container{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.form_container{
+    display: flex;
+    
+    gap: 2rem;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+}
+.block label{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+input{
+    width: 100px;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--Light-grey);
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+input::placeholder{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.submit_block{
+    display: flex;
+    align-items: center;
+}
+.submit_block hr{
+    width: 100%;
+}
+.sumbit_btn{
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: var(--Purple);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.output h1{
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+    height: fit-content;
+}
+.output span{
+    color: var(--Purple);
+}
+small{
+    color: red;
+}
+
+@media screen and (max-width:600px) {
+    .card{
+        width: 360px;
+    }
+    .container{
+        padding: 1rem;
+    }
+    .form_container{
+        margin-bottom: 5rem;
+        gap: 0;
+        justify-content: space-between;
+    }
+    .submit_block{
+        position: relative;
+    }
+    .sumbit_btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .output{
+        margin-top: 5rem;
+    }
+    .output h1{
+        font-size: 3.5rem;
+    }
+}
